@@ -6,7 +6,7 @@
 	"scripts": {
 		"dev": "tinacms dev -c 'astro dev --host'",
 		"start": "astro dev",
-		"build": "astro build",
+		"build": "tinacms build && astro build",
 		"preview": "astro preview",
 		"astro": "astro",
 		"prebuild:fetch-theme-color": "node fetch-theme-color.cjs",
