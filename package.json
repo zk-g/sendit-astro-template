@@ -1,36 +1,38 @@
 {
-  "name": "@example/basics",
-  "type": "module",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "dev": "astro dev --host",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro",
-    "prebuild:fetch-theme-color": "node fetch-theme-color.cjs",
-    "bookshop": "npx @bookshop/generate --bookshop src/components"
-  },
-  "dependencies": {
-    "@astrojs/react": "^2.2.1",
-    "@bookshop/astro-bookshop": "3.6.2",
-    "@bookshop/astro-engine": "3.6.2",
-    "@bookshop/generate": "3.6.2",
-    "@makotot/ghostui": "^2.0.0",
-    "@types/react": "^18.2.9",
-    "@types/react-dom": "^18.2.4",
-    "astro": "^2.6.1",
-    "punycode": "^2.3.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@astrojs/rss": "^2.4.3",
-    "@types/luxon": "^3.3.0",
-    "astro-seo": "^0.7.4",
-    "markdown-it": "^13.0.1",
-    "prettier": "^2.8.8",
-    "sass": "^1.63.2"
-  }
+	"name": "@example/basics",
+	"type": "module",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "tinacms dev -c 'astro dev --host'",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"prebuild:fetch-theme-color": "node fetch-theme-color.cjs",
+		"bookshop": "npx @bookshop/generate --bookshop src/components"
+	},
+	"dependencies": {
+		"@astrojs/react": "^2.2.1",
+		"@bookshop/astro-bookshop": "3.6.2",
+		"@bookshop/astro-engine": "3.6.2",
+		"@bookshop/generate": "3.6.2",
+		"@makotot/ghostui": "^2.0.0",
+		"@tinacms/cli": "^1.5.17",
+		"@types/react": "^18.2.9",
+		"@types/react-dom": "^18.2.4",
+		"astro": "^2.6.1",
+		"punycode": "^2.3.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"tinacms": "^1.5.8"
+	},
+	"devDependencies": {
+		"@astrojs/rss": "^2.4.3",
+		"@types/luxon": "^3.3.0",
+		"astro-seo": "^0.7.4",
+		"markdown-it": "^13.0.1",
+		"prettier": "^2.8.8",
+		"sass": "^1.63.2"
+	}
 }
