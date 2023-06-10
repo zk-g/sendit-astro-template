@@ -14,7 +14,7 @@ export default defineConfig({
 	},
 	media: {
 		tina: {
-			mediaRoot: "",
+			mediaRoot: "images",
 			publicFolder: "public",
 		},
 	},
@@ -26,11 +26,107 @@ export default defineConfig({
 				path: "src/content/blog",
 				fields: [
 					{
-						type: "string",
 						name: "title",
 						label: "Title",
+						type: "string",
 						isTitle: true,
 						required: true,
+					},
+					{
+						name: "date",
+						label: "Date",
+						type: "datetime",
+						ui: {
+							dateFormat: "DD MMMM YYYY",
+						},
+					},
+					{
+						name: "tags",
+						label: "Tags",
+						type: "string",
+						list: true,
+					},
+					{
+						name: "author",
+						label: "Author",
+						type: "string",
+						options: ["Aaron Britt", "Miyah Kelley", "Wendy Parkes", "Gerard Hopper", "Arther Conal", "Nathan", "Tina", "Kendall"],
+					},
+					{
+						name: "thumb_image",
+						label: "Thumbnail Image",
+						type: "object",
+						fields: [
+							{
+								name: "image",
+								label: "Image",
+								type: "image",
+							},
+							{
+								name: "image_alt",
+								label: "Image Alt",
+								type: "string",
+							},
+						],
+					},
+					{
+						name: "featured_image",
+						label: "Featured Image",
+						type: "object",
+						fields: [
+							{
+								name: "image",
+								label: "Image",
+								type: "image",
+							},
+							{
+								name: "image_alt",
+								label: "Image Alt",
+								type: "string",
+							},
+						],
+					},
+					{
+						name: "seo",
+						label: "SEO",
+						type: "object",
+						fields: [
+							{
+								name: "page_description",
+								label: "Page Description",
+								type: "string",
+							},
+							{
+								name: "canonical_url",
+								label: "Canonical URL",
+								type: "string",
+							},
+							{
+								name: "featured_image",
+								label: "Featured Image",
+								type: "image",
+							},
+							{
+								name: "featured_image_alt",
+								label: "Featured Image Alt",
+								type: "string",
+							},
+							{
+								name: "author_twitter_handle",
+								label: "Author Twitter Handle",
+								type: "string",
+							},
+							{
+								name: "open_graph_type",
+								label: "Open Graph Type",
+								type: "string",
+							},
+							{
+								name: "no_index",
+								label: "No Index",
+								type: "boolean",
+							},
+						],
 					},
 					{
 						type: "rich-text",
@@ -46,11 +142,58 @@ export default defineConfig({
 				path: "src/content/pages",
 				fields: [
 					{
-						type: "string",
 						name: "title",
 						label: "Title",
+						type: "string",
 						isTitle: true,
 						required: true,
+					},
+					{
+						name: "description",
+						label: "Description",
+						type: "string",
+					},
+					{
+						name: "seo",
+						label: "SEO",
+						type: "object",
+						fields: [
+							{
+								name: "page_description",
+								label: "Page Description",
+								type: "string",
+							},
+							{
+								name: "canonical_url",
+								label: "Canonical URL",
+								type: "string",
+							},
+							{
+								name: "featured_image",
+								label: "Featured Image",
+								type: "image",
+							},
+							{
+								name: "featured_image_alt",
+								label: "Featured Image Alt",
+								type: "string",
+							},
+							{
+								name: "author_twitter_handle",
+								label: "Author Twitter Handle",
+								type: "string",
+							},
+							{
+								name: "open_graph_type",
+								label: "Open Graph Type",
+								type: "string",
+							},
+							{
+								name: "no_index",
+								label: "No Index",
+								type: "boolean",
+							},
+						],
 					},
 					{
 						type: "rich-text",
