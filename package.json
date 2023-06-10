@@ -13,6 +13,7 @@
 		"bookshop": "npx @bookshop/generate --bookshop src/components"
 	},
 	"dependencies": {
+		"@astrojs/image": "^0.17.0",
 		"@astrojs/react": "^2.2.1",
 		"@bookshop/astro-bookshop": "3.6.2",
 		"@bookshop/astro-engine": "3.6.2",
@@ -21,10 +22,11 @@
 		"@tinacms/cli": "^1.5.17",
 		"@types/react": "^18.2.9",
 		"@types/react-dom": "^18.2.4",
-		"astro": "^2.6.1",
+		"astro": "^2.6.2",
 		"punycode": "^2.3.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
+		"sharp": "^0.32.1",
 		"tinacms": "^1.5.8"
 	},
 	"devDependencies": {
